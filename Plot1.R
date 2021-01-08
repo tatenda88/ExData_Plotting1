@@ -1,3 +1,4 @@
+
 dest <- "household_power_consumption.zip"
 
 #Download File, Unzip file and create table
@@ -12,13 +13,19 @@ subpower <- subset(power,power$Date=="1/2/2007" | power$Date =="2/2/2007")
 
 #Plot 1
 
-head(power)
+head(subpower)
 #calling the basic plot function
+
+#clearing plot space
+while (!is.null(dev.list())) dev.off()
+
+# Create PNG
+png("plot1.png")
 
 hist(as.numeric(as.character(subpower$Global_active_power)),col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)")
 
 # annotating graph
 title(main="Global Active Power")
 
-# Create PNG
-png("plot1.png")
+#close plot
+dev.off()
