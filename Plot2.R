@@ -21,4 +21,4 @@ plot(subpower$Time,as.numeric(as.character(subpower$Global_active_power)),type="
 title(main="Global Active Power Vs Time")
 
 #Plot in PNG
-png("Plot1.png")
+png("Plot1.png") 
