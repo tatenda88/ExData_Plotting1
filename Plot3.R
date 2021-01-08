@@ -25,3 +25,4 @@ title(main="Energy sub-metering")
 
 #Plot in PNG
 png("Plot3.png)
+
